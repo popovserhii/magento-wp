@@ -1,21 +1,20 @@
 {
-    "name": "popov/magento-seo",
+    "name": "popov/magento-wp",
     "type": "magento-module",
     "license":"MIT Licence",
-    "description":"Advanced SEO Module for Magento",
+    "description":"Simple intergration Magento with WordPress",
     "authors":[{
         "name":"Serhii Popov",
         "email":"popow.serhii@gmail.com"
     }],
     "extra": {
         "map": [
-          ["app/etc/modules/Popov_Seo.xml", "app/etc/modules/Popov_Seo.xml"],
-          ["app/code/community/Popov/Seo/", "app/code/community/Popov/Seo/"],
-          ["app/locale/en_US/Popov_Seo.csv", "app/locale/en_US/Popov_Seo.csv"],
-          ["app/locale/uk_UA/Popov_Seo.csv", "app/locale/uk_UA/Popov_Seo.csv"],
-          ["app/locale/ru_RU/Popov_Seo.csv", "app/locale/ru_RU/Popov_Seo.csv"],
-          ["app/design/frontend/base/default/layout/popov/seo.xml", "app/design/frontend/base/default/layout/popov/seo.xml"],
-          ["app/design/adminhtml/default/default/layout/popov/seo.xml", "app/design/adminhtml/default/default/layout/popov/seo.xml"]
+          ["app/etc/modules/Popov_Wp.xml", "app/etc/modules/Popov_Wp.xml"],
+          ["app/code/community/Popov/Wp/", "app/code/community/Popov/Wp/"],
+          ["app/locale/en_US/Popov_Wp.csv", "app/locale/en_US/Popov_Wp.csv"],
+          ["app/locale/uk_UA/Popov_Wp.csv", "app/locale/uk_UA/Popov_Wp.csv"],
+          ["app/locale/ru_RU/Popov_Wp.csv", "app/locale/ru_RU/Popov_Wp.csv"],
+          ["app/design/frontend/base/default/layout/popov/wp.xml", "app/design/frontend/base/default/layout/popov/wp.xml"]
         ]
     }
 }
