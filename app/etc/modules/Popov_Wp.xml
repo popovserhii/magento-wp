@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Popov_Wp>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Popov_Base />
+            </depends>
+        </Popov_Wp>
+    </modules>
+</config>

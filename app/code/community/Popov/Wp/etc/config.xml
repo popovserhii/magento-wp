@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Popov_Wp>
+			<version>0.1.0</version>
+		</Popov_Wp>
+	</modules>
+
+	<global>
+
+		<blocks>
+			<popov_wp>
+				<class>Popov_Wp_Block</class>
+			</popov_wp>
+		</blocks>
+
+		<helpers>
+			<popov_wp>
+				<class>Popov_Wp_Helper</class>
+			</popov_wp>
+		</helpers>
+
+        <models>
+            <popov_wp>
+                <class>Popov_Wp_Model</class>
+                <resourceModel>popov_wp_resource</resourceModel>
+            </popov_wp>
+            <popov_wp_resource>
+                <class>Popov_Wp_Model_Resource</class>
+                <entities>
+                    <rule>
+                        <table>wp_post</table>
+                    </rule>
+                </entities>
+            </popov_wp_resource>
+        </models>
+
+        <resources>
+            <popov_seo_setup>
+                <setup>
+                    <module>Popov_Seo</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </popov_seo_setup>
+        </resources>
+
+
+        <resources>
+            <popov_wp_write>
+                <connection>
+                    <use>popov_wp_database</use>
+                </connection>
+            </popov_wp_write>
+            <popov_wp_read>
+                <connection>
+                    <use>popov_wp_database</use>
+                </connection>
+            </popov_wp_read>
+            <popov_wp_setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </popov_wp_setup>
+
+            <popov_wp_database>
+                <connection>
+                    <host><![CDATA[pbud.mysql.tools]]></host>
+                    <username><![CDATA[pbud_blog]]></username>
+                    <password><![CDATA[w7hg3mue]]></password>
+                    <dbname><![CDATA[pbud_blog]]></dbname>
+                    <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
+                    <model><![CDATA[mysql4]]></model>
+                    <type><![CDATA[pdo_mysql]]></type>
+                    <active>1</active>
+                </connection>
+            </popov_wp_database>
+        </resources>
+
+	</global>
+
+	<frontend>
+		<layout>
+			<updates>
+				<popov_wp>
+					<file>popov/wp.xml</file>
+				</popov_wp>
+			</updates>
+		</layout>
+
+		<translate>
+			<modules>
+				<Popov_Wp>
+					<files>
+						<default>Popov_Wp.csv</default>
+					</files>
+				</Popov_Wp>
+			</modules>
+		</translate>
+	</frontend>
+
+</config>

@@ -11,10 +11,7 @@
         "map": [
           ["app/etc/modules/Popov_Wp.xml", "app/etc/modules/Popov_Wp.xml"],
           ["app/code/community/Popov/Wp/", "app/code/community/Popov/Wp/"],
-          ["app/locale/en_US/Popov_Wp.csv", "app/locale/en_US/Popov_Wp.csv"],
-          ["app/locale/uk_UA/Popov_Wp.csv", "app/locale/uk_UA/Popov_Wp.csv"],
-          ["app/locale/ru_RU/Popov_Wp.csv", "app/locale/ru_RU/Popov_Wp.csv"],
-          ["app/design/frontend/base/default/layout/popov/wp.xml", "app/design/frontend/base/default/layout/popov/wp.xml"]
+          ["app/design/frontend/base/default/template/popov/posts_home.phtml", "app/design/frontend/base/default/layout/popov/posts_home.phtml"]
         ]
     }
 }
