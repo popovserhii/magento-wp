@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="top.links">
+            <action method="addLink" translate="label title">
+                <label>Blog</label>
+                <url>http://blog.art-market.com.ua/</url>
+                <title>Blog</title>
+                <prepare/>
+                <urlParams/>
+                <position>40</position>
+                <liParams/>
+                <aParams><![CDATA[target="_blank"]]></aParams>
+            </action>
+        </reference>
+    </default>
+</layout>
