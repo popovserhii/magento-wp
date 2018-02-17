@@ -2,14 +2,60 @@
 
 class Popov_Wp_Block_Last extends Mage_Core_Block_Template
 {
-    protected function _toHtml()
+    protected $posts = array();
+
+    /**
+     * @return \Popov_Wp_Helper_Data
+     */
+    public function getHelper()
     {
-        die(__METHOD__);
-        
-        /*if ($this->_helper()->getEnabled()) {
-            return $this->setData('blog_widget_recent_count', $this->getBlocksCount())->renderView();
-        }*/
+        return Mage::helper('popov_wp');
     }
+
+    public function getPosts()
+    {
+        if ($this->getHelper()->isEnabled() && !$this->posts) {
+            $collection = Mage::getModel('popov_wp/post')->getCollection()
+                ->setOrder('post_date', 'desc')
+            ;
+
+            $select = $collection->getSelect();
+            $select->limit(5);
+
+            $select->joinLeft(
+                ['wm1' => 'wp_postmeta'],
+                'wm1.post_id = main_table.id AND wm1.meta_value IS NOT NULL AND wm1.meta_key = "_thumbnail_id"'
+            /*array(
+                "{$tableJoinAlias}.Name AS configurable_name",
+            )*/
+            );
+
+            $select->joinLeft(
+                ['wm2' => 'wp_postmeta'],
+                'wm1.meta_value = wm2.post_id AND wm2.meta_key = "_wp_attached_file" AND wm2.meta_value IS NOT NULL'
+            /*array(
+                "{$tableJoinAlias}.Name AS configurable_name",
+            )*/
+            );
+
+            $select->where('main_table.post_status = ?', 'publish');
+            $select->where('main_table.post_type = ?', 'post');
+            //Zend_Debug::dump([count($collection), $collection->getFirstItem()->getData()]);
+            //die(__METHOD__);
+            /*if ($this->_helper()->getEnabled()) {
+                return $this->setData('blog_widget_recent_count', $this->getBlocksCount())->renderView();
+            }*/
+
+            $this->posts = $collection;
+        }
+        
+        return $this->posts;
+    }
+
+    /*protected function _toHtml()
+    {
+        return __METHOD__;
+    }*/
 
     /*public function getRecent()
     {

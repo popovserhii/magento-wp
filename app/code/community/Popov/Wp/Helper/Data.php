@@ -13,4 +13,9 @@
  * @license https://opensource.org/licenses/MIT The MIT License (MIT)
  */
 class Popov_Wp_Helper_Data extends Mage_Core_Helper_Abstract
-{}
+{
+    public function isEnabled()
+    {
+        return Mage::getStoreConfig('popov_wp/settings/enable');
+    }
+}

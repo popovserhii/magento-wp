@@ -28,9 +28,9 @@
             <popov_wp_resource>
                 <class>Popov_Wp_Model_Resource</class>
                 <entities>
-                    <rule>
-                        <table>wp_post</table>
-                    </rule>
+                    <post>
+                        <table>wp_posts</table>
+                    </post>
                 </entities>
             </popov_wp_resource>
         </models>
