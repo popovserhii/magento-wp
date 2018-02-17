@@ -12,7 +12,7 @@
           ["app/etc/modules/Popov_Wp.xml", "app/etc/modules/Popov_Wp.xml"],
           ["app/code/community/Popov/Wp/", "app/code/community/Popov/Wp/"],
           ["app/design/frontend/base/default/layout/popov/wp.xml", "app/design/frontend/base/default/layout/popov/wp.xml"],
-          ["app/design/frontend/base/default/template/popov/posts_home.phtml", "app/design/frontend/base/default/layout/popov/posts_home.phtml"]
+          ["app/design/frontend/base/default/template/popov/wp/posts_home.phtml", "app/design/frontend/base/default/layout/popov/wp/posts_home.phtml"]
         ]
     }
 }
