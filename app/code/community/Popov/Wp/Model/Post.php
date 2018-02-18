@@ -46,7 +46,7 @@ class Popov_Wp_Model_Post extends Mage_Core_Model_Abstract
     public function getCreatedTime()
     {
         if (!$this->_createdTime) {
-            $this->_createdTime = new DateTime($this->getData('post_data'));
+            $this->_createdTime = new DateTime($this->getData('post_date'));
         }
 
         return $this->_createdTime;

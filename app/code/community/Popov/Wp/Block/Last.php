@@ -7,22 +7,14 @@ class Popov_Wp_Block_Last extends Mage_Core_Block_Template
      */
     protected $posts = array();
 
-    /**
-     * @return Popov_Wp_Helper_Data
-     */
-    public function getHelper()
-    {
-        return Mage::helper('popov_wp');
-    }
-
     public function getPosts()
     {
-        if ($this->getHelper()->isEnabled() && !$this->posts) {
+        if ($this->helper('popov_wp')->isEnabled() && !$this->posts) {
             $collection = Mage::getModel('popov_wp/post')->getCollection()
                 ->setOrder('post_date', 'desc');
 
             $select = $collection->getSelect();
-            $select->limit($this->getHelper()->getNumberPostsOnHome());
+            $select->limit($this->helper('popov_wp')->getNumberPostsOnHome());
 
             $select->joinLeft(
                 ['wm1' => 'wp_postmeta'],

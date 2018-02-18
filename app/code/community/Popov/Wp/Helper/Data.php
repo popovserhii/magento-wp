@@ -29,7 +29,7 @@ class Popov_Wp_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfig('popov_wp/settings/top_links_name');
     }
 
-    public function getPositon()
+    public function getPosition()
     {
         return Mage::getStoreConfig('popov_wp/settings/top_links_position');
     }
