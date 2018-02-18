@@ -66,10 +66,10 @@
 
             <popov_wp_database>
                 <connection>
-                    <host><![CDATA[pbud.mysql.tools]]></host>
-                    <username><![CDATA[pbud_blog]]></username>
-                    <password><![CDATA[w7hg3mue]]></password>
-                    <dbname><![CDATA[pbud_blog]]></dbname>
+                    <host><![CDATA[localhost]]></host>
+                    <username><![CDATA[username]]></username>
+                    <password><![CDATA[password]]></password>
+                    <dbname><![CDATA[database]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>
@@ -100,4 +100,14 @@
 		</translate>
 	</frontend>
 
+
+    <default>
+        <popov_wp>
+            <settings>
+                <top_links_name>Blog</top_links_name>
+                <top_links_position>40</top_links_position>
+                <number_posts_on_home>5</number_posts_on_home>
+            </settings>
+        </popov_wp>
+    </default>
 </config>

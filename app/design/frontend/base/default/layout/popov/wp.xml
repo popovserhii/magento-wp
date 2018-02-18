@@ -2,13 +2,13 @@
 <layout version="0.1.0">
     <default>
         <reference name="top.links">
-            <action method="addLink" translate="label title">
-                <label>Blog</label>
-                <url>http://blog.art-market.com.ua/</url>
-                <title>Blog</title>
+            <action method="addLink" translate="label title" ifconfig="popov_wp/settings/top_links_add">
+                <label helper="popov_wp/getTopName" />
+                <url helper="popov_wp/getSiteUrl" />
+                <title helper="popov_wp/getTopName" />
                 <prepare/>
                 <urlParams/>
-                <position>40</position>
+                <position helper="popov_wp/getPosition" />
                 <liParams/>
                 <aParams><![CDATA[target="_blank"]]></aParams>
             </action>

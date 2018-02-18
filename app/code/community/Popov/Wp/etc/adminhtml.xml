@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<config>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+
+            <admin>
+                <children>
+
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <popov_wp translate="title" module="popov_wp">
+                                        <title>WordPress</title>
+                                        <sort_order>100</sort_order>
+                                    </popov_wp>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+
+        </resources>
+    </acl>
+</config>

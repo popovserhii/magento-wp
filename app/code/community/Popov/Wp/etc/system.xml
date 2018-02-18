@@ -35,6 +35,7 @@
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
 						</enable>
+
 						<top_links_add translate="label">
 							<label>Add lable to top menu</label>
                             <frontend_type>select</frontend_type>
@@ -43,9 +44,12 @@
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
 						</top_links_add>
                         <top_links_name translate="label comment">
-                            <label>Top menu label name</label>
+                            <label>Label name</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
@@ -55,6 +59,29 @@
                                 <top_links_add>1</top_links_add>
                             </depends>
                         </top_links_name>
+                        <top_links_position translate="label comment">
+                            <label>Label position</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <top_links_add>1</top_links_add>
+                            </depends>
+                        </top_links_position>
+
+                        <number_posts_on_home translate="label comment">
+                            <label>How many posts show on home?</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                        </number_posts_on_home>
 
 					</fields>
 				</settings>
