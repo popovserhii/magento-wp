@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <config>
-	<modules>
-		<Popov_Wp>
-			<version>0.1.0</version>
-		</Popov_Wp>
-	</modules>
+    <modules>
+        <Popov_Wp>
+            <version>0.1.0</version>
+        </Popov_Wp>
+    </modules>
 
-	<global>
+    <global>
 
-		<blocks>
-			<popov_wp>
-				<class>Popov_Wp_Block</class>
-			</popov_wp>
-		</blocks>
+        <blocks>
+            <popov_wp>
+                <class>Popov_Wp_Block</class>
+            </popov_wp>
+        </blocks>
 
-		<helpers>
-			<popov_wp>
-				<class>Popov_Wp_Helper</class>
-			</popov_wp>
-		</helpers>
+        <helpers>
+            <popov_wp>
+                <class>Popov_Wp_Helper</class>
+            </popov_wp>
+        </helpers>
 
         <models>
             <popov_wp>
@@ -34,18 +34,6 @@
                 </entities>
             </popov_wp_resource>
         </models>
-
-        <resources>
-            <popov_seo_setup>
-                <setup>
-                    <module>Popov_Seo</module>
-                </setup>
-                <connection>
-                    <use>core_setup</use>
-                </connection>
-            </popov_seo_setup>
-        </resources>
-
 
         <resources>
             <popov_wp_write>
@@ -78,27 +66,27 @@
             </popov_wp_database>
         </resources>
 
-	</global>
+    </global>
 
-	<frontend>
-		<layout>
-			<updates>
-				<popov_wp>
-					<file>popov/wp.xml</file>
-				</popov_wp>
-			</updates>
-		</layout>
+    <frontend>
+        <layout>
+            <updates>
+                <popov_wp>
+                    <file>popov/wp.xml</file>
+                </popov_wp>
+            </updates>
+        </layout>
 
-		<translate>
-			<modules>
-				<Popov_Wp>
-					<files>
-						<default>Popov_Wp.csv</default>
-					</files>
-				</Popov_Wp>
-			</modules>
-		</translate>
-	</frontend>
+        <translate>
+            <modules>
+                <Popov_Wp>
+                    <files>
+                        <default>Popov_Wp.csv</default>
+                    </files>
+                </Popov_Wp>
+            </modules>
+        </translate>
+    </frontend>
 
 
     <default>

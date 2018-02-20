@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The MIT License (MIT)
  * Copyright (c) 2018 Serhii Popov
@@ -12,10 +13,10 @@
  * @author Serhii Popov <popow.serhii@gmail.com>
  * @license https://opensource.org/licenses/MIT The MIT License (MIT)
  */
-class Popov_Wp_Model_Resource_Post extends Mage_Core_Model_Resource_Db_Abstract {
-
-    protected function _construct() {
+class Popov_Wp_Model_Resource_Post extends Mage_Core_Model_Resource_Db_Abstract
+{
+    protected function _construct()
+    {
         $this->_init('popov_wp/post', 'ID');
     }
-
 }
