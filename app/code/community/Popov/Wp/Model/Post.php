@@ -20,7 +20,8 @@ class Popov_Wp_Model_Post extends Mage_Core_Model_Abstract
      */
     protected $_url;
 
-    protected $_imageUrlFormat = '/wp-content/uploads/%s/%s-400x240.%s';
+    //protected $_imageUrlFormat = '/wp-content/uploads/%s/%s-400x240.%s';
+    protected $_imageUrlFormat = '%s/%s-400x240.%s';
 
     protected $_createdTime;
 
@@ -32,7 +33,7 @@ class Popov_Wp_Model_Post extends Mage_Core_Model_Abstract
     public function getBaseUrl()
     {
         if (!$this->_url) {
-            $this->_url = parse_url($this->getData('guid'));
+            $this->_url = parse_url($this->getData('post_guid'));
         }
 
         return $this->_url['scheme'] . '://' . $this->_url['host'];
@@ -40,7 +41,7 @@ class Popov_Wp_Model_Post extends Mage_Core_Model_Abstract
 
     public function getImageUrlFormat()
     {
-        return $this->getBaseUrl() . $this->_imageUrlFormat;
+        return /*$this->getBaseUrl() . */$this->_imageUrlFormat;
     }
 
     public function getCreatedTime()
@@ -54,7 +55,8 @@ class Popov_Wp_Model_Post extends Mage_Core_Model_Abstract
 
     public function getImage()
     {
-        if ($image = $this->getData('meta_value')) {
+        //return $image = $this->getData('post_image');
+        if ($image = $this->getData('post_image')) {
             $pathInfo = pathinfo($image);
             $image = sprintf(
                 $this->getImageUrlFormat(),
